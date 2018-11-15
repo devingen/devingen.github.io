@@ -1,0 +1,80 @@
+import { Layout, Menu } from "antd";
+import * as React from 'react';
+import { Link } from "react-router-dom";
+import './NavLeft.css';
+
+const { Sider } = Layout;
+const { SubMenu } = Menu;
+
+const menuItems = [
+  {
+    key: '/',
+    title: 'HomePage',
+  },
+  {
+    key: '/samples',
+    subMenus: [
+      {
+        key: '/samples/login',
+        title: 'Login',
+      },
+      {
+        key: '/samples/js',
+        title: 'Long Form',
+      },
+      {
+        key: '/samples/json',
+        title: 'Long Form with JSON',
+      },
+    ],
+    title: 'SamplesPage',
+  }
+];
+
+export class NavLeft extends React.Component {
+
+  public render() {
+
+    let selectedRootRoute = '';
+    let selectedSubRoute = '';
+    if (location) {
+      selectedRootRoute = location.pathname.split('/')[1];
+      selectedSubRoute = location.pathname;
+    }
+
+    return (
+      <div className="nav-left">
+        <Sider
+          style={{ overflow: 'auto', height: '100vh', position: 'fixed', left: 0 }}
+          theme="light"
+        >
+          <Menu
+            className="menu"
+            defaultOpenKeys={[selectedRootRoute]}
+            defaultSelectedKeys={[selectedSubRoute]}
+            mode="inline"
+          >
+            {menuItems.map(item => (
+              item.subMenus
+                ? <SubMenu
+                  key={item.key}
+                  title={item.title}
+                >
+                  {item.subMenus.map(subMenu => (
+                    <Menu.Item key={subMenu.key}>
+                      <Link to={subMenu.key}>{subMenu.title}</Link>
+                    </Menu.Item>
+                  ))}
+                </SubMenu>
+                : <Menu.Item key={item.key}>
+                  <Link to={item.key}>{item.title}</Link>
+                </Menu.Item>
+            ))}
+
+          </Menu>
+        </Sider>
+      </div>
+    )
+  }
+
+}
