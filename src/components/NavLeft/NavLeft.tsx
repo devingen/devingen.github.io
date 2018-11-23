@@ -19,8 +19,16 @@ const menuItems = [
         title: 'Login',
       },
       {
+        key: '/samples/loginWithExtraButtons',
+        title: 'Login With Extra Buttons',
+      },
+      {
         key: '/samples/js',
         title: 'Long Form',
+      },
+      {
+        key: '/samples/js-with-values',
+        title: 'Long Form With Values',
       },
       {
         key: '/samples/json',

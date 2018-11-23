@@ -2,7 +2,7 @@ import { Form, MultipleChoice, NumberInput, SectionHeader, SingleChoice, TextInp
 import { RatingStars } from "dvn-antd/dist/inputs/RatingStars";
 import * as React from 'react';
 
-export class LongForm extends React.Component {
+export class LongFormWithInitialValues extends React.Component {
 
   public render() {
     const fields: any[] = [
@@ -16,7 +16,7 @@ export class LongForm extends React.Component {
         'Simple Text',
         'Simple text placeholder',
         'Simple text input that can be used for email, first name, last name etc.',
-      ),
+      ).setValue('This is short text value'),
       new TextInput(
         'longText',
         'Long Text',
@@ -25,7 +25,7 @@ export class LongForm extends React.Component {
         'text',
         3,
         5
-      ),
+      ).setValue('Long text value'),
       new SectionHeader(
         'sectionNumberInput',
         'Number Inputs',
@@ -39,23 +39,23 @@ export class LongForm extends React.Component {
         0.5,
         -3,
         10
-      ),
+      ).setValue(8),
       new SectionHeader(
         'sectionSingleChoice',
         'Selecting single item',
         'The inputs below are used for providing single selection input.',
       ),
       new SingleChoice(
-        'select',
+        'selectRadio',
         'Radio field',
         [
           new SingleChoice.Option('Option 1', 1),
           new SingleChoice.Option('Option 2', 2),
         ],
         'Displays the options with radio inputs.',
-      ),
+      ).setValue(2),
       new SingleChoice(
-        'select',
+        'selectSelect',
         'Select field',
         [
           new SingleChoice.Option('Option 1', 1),
@@ -64,23 +64,23 @@ export class LongForm extends React.Component {
         'Select input that shows the options as list.',
         'select',
         'Placeholder shown if no value is selected',
-      ),
+      ).setValue(2),
       new SectionHeader(
         'sectionMultipleChoice',
         'Selecting multiple item',
         'The inputs below are used for providing multiple selection input.',
       ),
       new MultipleChoice(
-        'multipleChoice',
+        'multipleChoiceCheckbox',
         'Checkboxes',
         [
           new MultipleChoice.Option('Option 1', 1),
           new MultipleChoice.Option('Option 2', 2),
         ],
         'Displays checkboxes for multiple value selection.',
-      ),
+      ).setValue([2]),
       new MultipleChoice(
-        'multipleChoice',
+        'multipleChoiceSelect',
         'Multiple Select',
         [
           new MultipleChoice.Option('Option 1', 1),
@@ -89,9 +89,9 @@ export class LongForm extends React.Component {
         'Displays a select input like the single option, the only difference is the way it shows the selected values.',
         'select',
         'Custom placeholder',
-      ),
+      ).setValue([2]),
       new MultipleChoice(
-        'multipleChoice',
+        'multipleChoiceTag',
         'Tag Cloud',
         [
           new MultipleChoice.Option('Option 1', 1),
@@ -99,7 +99,7 @@ export class LongForm extends React.Component {
         ],
         'Displays fancy tags, works as same as the checkboxes.',
         'tag-cloud',
-      ),
+      ).setValue([2]),
       new SectionHeader(
         'sectionOthers',
         'Other Inputs',
@@ -110,7 +110,7 @@ export class LongForm extends React.Component {
         'Rating stars',
         'Displays number of stars to get floating value between 0-1.',
         10,
-      )
+      ).setValue(0.8)
     ];
 
     return (

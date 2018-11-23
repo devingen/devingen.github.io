@@ -1,4 +1,4 @@
-import { Form, MultipleChoice, SectionHeader, SingleChoice, TextInput } from "dvn-antd";
+import { Form, MultipleChoice, NumberInput, SectionHeader, SingleChoice, TextInput } from "dvn-antd";
 import { RatingStars } from "dvn-antd/dist/inputs/RatingStars";
 import * as React from 'react';
 
@@ -28,6 +28,22 @@ export class LongFormJson extends React.Component {
         placeholder: 'Long text placeholder',
         title: 'Long Text',
         type: TextInput.type,
+      },
+      {
+        header: 'Number Inputs',
+        id: 'sectionNumberInput',
+        sectionDescription: 'This input can be used for numbers.',
+        type: SectionHeader.type,
+      },
+      {
+        description: 'This input can be used for amounts, decimals etc. Each step here will increase/decrease 0.5, max is 10, min is -3.',
+        id: 'simpleNumber',
+        max: 10,
+        min: -3,
+        placeholder: 'Type some number',
+        step: 0.5,
+        title: 'Number',
+        type: NumberInput.type,
       },
       {
         header: 'Selecting single item',

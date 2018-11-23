@@ -5,7 +5,7 @@
   "dependencies": {
     "antd": "^3.10.7",
     "codemirror": "^5.41.0",
-    "dvn-antd": "0.1.5",
+    "dvn-antd": "file:../dvn-antd",
     "react": "^16.6.1",
     "react-codemirror2": "^5.1.0",
     "react-dom": "^16.6.1",
