@@ -46,7 +46,7 @@ export class LongForm extends React.Component {
         'The inputs below are used for providing single selection input.',
       ),
       new SingleChoice(
-        'select',
+        'radio',
         'Radio field',
         [
           new SingleChoice.Option('Option 1', 1),
@@ -71,7 +71,7 @@ export class LongForm extends React.Component {
         'The inputs below are used for providing multiple selection input.',
       ),
       new MultipleChoice(
-        'multipleChoice',
+        'checkboxes',
         'Checkboxes',
         [
           new MultipleChoice.Option('Option 1', 1),
@@ -80,7 +80,7 @@ export class LongForm extends React.Component {
         'Displays checkboxes for multiple value selection.',
       ),
       new MultipleChoice(
-        'multipleChoice',
+        'multipleSelect',
         'Multiple Select',
         [
           new MultipleChoice.Option('Option 1', 1),
@@ -91,7 +91,7 @@ export class LongForm extends React.Component {
         'Custom placeholder',
       ),
       new MultipleChoice(
-        'multipleChoice',
+        'tagCloud',
         'Tag Cloud',
         [
           new MultipleChoice.Option('Option 1', 1),
@@ -119,6 +119,7 @@ export class LongForm extends React.Component {
           <div className="col-sm-12 col-md-12">
             <Form
               formData={{ fields }}
+              onChange={this.onChange}
               onSubmit={this.onSubmit}
               submitButtonLabel="Submit"
             />
@@ -128,7 +129,11 @@ export class LongForm extends React.Component {
     )
   }
 
+  private onChange = (data: any): void => {
+    console.log('onChange', data);
+  }
+
   private onSubmit = (data: any): void => {
-    console.log(data);
+    console.log('onSubmit', data);
   }
 }

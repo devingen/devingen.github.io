@@ -34,6 +34,10 @@ const menuItems = [
         key: '/samples/json',
         title: 'Long Form with JSON',
       },
+      {
+        key: '/samples/generator',
+        title: 'Form Generator',
+      },
     ],
     title: 'SamplesPage',
   }
