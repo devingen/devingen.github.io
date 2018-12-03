@@ -32,7 +32,7 @@ export class LoginFormWithExtraButtons extends React.Component {
           </div>
           <div className="col-sm-12 col-md-12">
             <Form
-              formData={{ fields }}
+              fields={fields}
               layout="compact"
               submitButtonLabel="Login"
               onSubmit={this.onSubmit}

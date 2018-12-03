@@ -16,7 +16,7 @@ export class LoginForm extends React.Component {
 
     return (
       <Form
-        formData={{ fields }}
+        fields={fields}
         onSubmit={this.onSubmit}
         submitButtonLabel="Login"
       />

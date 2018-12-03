@@ -38,6 +38,10 @@ const menuItems = [
         key: '/samples/generator',
         title: 'Form Generator',
       },
+      {
+        key: '/samples/previewFields',
+        title: 'Preview Fields',
+      },
     ],
     title: 'SamplesPage',
   }

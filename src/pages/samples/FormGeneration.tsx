@@ -6,11 +6,7 @@ export class FormGeneration extends React.Component {
   public render() {
 
     const fields: any[] = [
-      new FormGenerator(
-        'someForm',
-        'tr',
-        true
-      ),
+      new FormGenerator('someForm', 'en', true),
     ];
 
     return (
@@ -21,7 +17,7 @@ export class FormGeneration extends React.Component {
           </div>
           <div className="col-sm-12 col-md-12">
             <Form
-              formData={{ fields }}
+              fields={fields}
               submitButtonLabel="Login"
               onSubmit={this.onSubmit}
             />

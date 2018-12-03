@@ -6,6 +6,7 @@ import { LoginFormWithExtraButtons } from './LoginFormWithExtraButtons';
 import { LongForm } from './LongForm';
 import { LongFormJson } from './LongFormJson';
 import { LongFormWithInitialValues } from './LongFormWithInitialValues';
+import { PreviewFields } from './PreviewFields';
 
 export const SamplesPage = () => (
   <React.Fragment>
@@ -15,5 +16,6 @@ export const SamplesPage = () => (
     <Route path="/samples/json" component={LongFormJson} />
     <Route path="/samples/login" component={LoginForm} />
     <Route path="/samples/loginWithExtraButtons" component={LoginFormWithExtraButtons} />
+    <Route path="/samples/previewFields" component={PreviewFields} />
   </React.Fragment>
 );

@@ -118,7 +118,7 @@ export class LongFormWithInitialValues extends React.Component {
         <div className="row">
           <div className="col-sm-12 col-md-12">
             <Form
-              formData={{ fields }}
+              fields={fields}
               onSubmit={this.onSubmit}
               submitButtonLabel="Submit"
             />

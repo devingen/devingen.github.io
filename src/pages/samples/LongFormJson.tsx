@@ -138,7 +138,7 @@ export class LongFormJson extends React.Component {
         <div className="row">
           <div className="col-sm-12">
             <Form
-              formData={{ fields }}
+              fields={fields}
               onSubmit={this.onSubmit}
               submitButtonLabel="Submit"
             />

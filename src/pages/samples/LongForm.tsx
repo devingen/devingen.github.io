@@ -118,7 +118,7 @@ export class LongForm extends React.Component {
         <div className="row">
           <div className="col-sm-12 col-md-12">
             <Form
-              formData={{ fields }}
+              fields={fields}
               onChange={this.onChange}
               onSubmit={this.onSubmit}
               submitButtonLabel="Submit"
