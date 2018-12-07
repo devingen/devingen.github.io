@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "antd": "^3.10.7",
-    "codemirror": "^5.41.0",
+    "antd": "3.10.9",
+    "codemirror": "^5.42.0",
     "dvn-antd": "file:../dvn-antd",
-    "react": "^16.6.1",
+    "react": ">=16.0.0",
     "react-codemirror2": "^5.1.0",
-    "react-dom": "^16.6.1",
+    "react-dom": ">=16.0.0",
     "react-router-dom": "^4.3.1",
     "react-scripts-ts": "3.1.0"
   },
@@ -20,11 +20,11 @@
   },
   "devDependencies": {
     "@types/codemirror": "0.0.68",
-    "@types/jest": "^23.3.9",
-    "@types/node": "^10.12.5",
-    "@types/react": "^16.7.3",
-    "@types/react-dom": "^16.0.9",
+    "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.12",
+    "@types/react": "^16.7.13",
+    "@types/react-dom": "^16.0.11",
     "@types/react-router-dom": "^4.3.1",
-    "typescript": "^3.1.6"
+    "typescript": "^3.2.2"
   }
 }

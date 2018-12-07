@@ -1,4 +1,4 @@
-import { Form, MultipleChoice, NumberInput, SectionHeader, SingleChoice, TextInput } from 'dvn-antd';
+import { DateInput, Form, MultipleChoice, NumberInput, SectionHeader, SingleChoice, TextInput } from 'dvn-antd';
 import { RatingStars } from 'dvn-antd/dist/inputs/RatingStars';
 import * as React from 'react';
 
@@ -17,9 +17,18 @@ export class PreviewFields extends React.Component {
       new TextInput('address', 'Adress', 'Type your address', '', 'text', 3, 5)
         .showPreview()
         .setValue('Apostolou Pavlou 17, Thessaloniki 546 34, Greece'),
-      new NumberInput('birthYear', 'Birth Year', 'Select a year', '', 1, 0, 2019)
+      new NumberInput('id', 'Identity Number', 'Type identity number', '', 10000000146, 0, 99999999990)
         .showPreview()
-        .setValue(1881),
+        .setValue(10000000146),
+      new DateInput('birthDate', 'Birth Date', '', '')
+        .setDateFormat('DD MMM YYYY')
+        .showPreview()
+        .setValue(new Date(1881, 4, 19)),
+      new DateInput('birthDate', 'Date of Passing', '', '')
+        .setDateFormat('DD MMM YYYY - HH:mm')
+        .setInputType('dateTime')
+        .showPreview()
+        .setValue(new Date(1938, 9, 10, 9, 5)),
       new MultipleChoice('profession',
         'Profession',
         [
@@ -48,7 +57,7 @@ export class PreviewFields extends React.Component {
         ])
         .showPreview()
         .setValue('besiktas'),
-      new RatingStars('rating', 'Rating').showPreview().setValue(0.8)
+      new RatingStars('rating', 'Rating').showPreview().setValue(0.8),
     ];
 
     return (

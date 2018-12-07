@@ -9,7 +9,7 @@ const { SubMenu } = Menu;
 const menuItems = [
   {
     key: '/',
-    title: 'HomePage',
+    title: 'Home',
   },
   {
     key: '/samples',
@@ -43,7 +43,7 @@ const menuItems = [
         title: 'Preview Fields',
       },
     ],
-    title: 'SamplesPage',
+    title: 'Samples',
   }
 ];
 

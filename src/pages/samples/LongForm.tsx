@@ -1,5 +1,5 @@
-import { Form, MultipleChoice, NumberInput, SectionHeader, SingleChoice, TextInput } from "dvn-antd";
-import { RatingStars } from "dvn-antd/dist/inputs/RatingStars";
+import { DateInput, Form, MultipleChoice, NumberInput, SectionHeader, SingleChoice, TextInput } from 'dvn-antd';
+import { RatingStars } from 'dvn-antd/dist/inputs/RatingStars';
 import * as React from 'react';
 
 export class LongForm extends React.Component {
@@ -101,6 +101,20 @@ export class LongForm extends React.Component {
         'tag-cloud',
       ),
       new SectionHeader(
+        'sectionDate',
+        'Date Inputs',
+        'Date and time related inputs.',
+      ),
+      new DateInput('date', 'Date', 'Select date', 'Lets user select a day with month and year.')
+        .setDateFormat('DD/MM/YYYY'),
+      new DateInput('time', 'Time', 'Select time', 'Lets user select date and time.')
+        .setTimeFormat('HH:mm')
+        .setInputType('time')
+        .setTimePlaceholder('Select time'),
+      new DateInput('dateTime', 'Date Time', 'Select date', 'Lets user select date and time.')
+        .setInputType('dateTime')
+        .setTimePlaceholder('Select time'),
+      new SectionHeader(
         'sectionOthers',
         'Other Inputs',
         'Other available inputs.',
@@ -126,14 +140,14 @@ export class LongForm extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 
   private onChange = (data: any): void => {
     console.log('onChange', data);
-  }
+  };
 
   private onSubmit = (data: any): void => {
     console.log('onSubmit', data);
-  }
+  };
 }
